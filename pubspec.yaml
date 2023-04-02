@@ -31,11 +31,13 @@ dependencies:
   flutter:
     sdk: flutter
   carousel_pro: ^1.0.0
-  firebase_auth: ^4.3.0
+  firebase_auth: ^4.4.0
   cloud_firestore: ^4.4.5
   google_sign_in: ^6.0.2
   shared_preferences: ^2.0.20
   fluttertoast: ^8.2.1
+  firebase_core: ^2.9.0
+
 
 
 
@@ -88,6 +90,8 @@ flutter:
     - assets/images/products/shoe1.jpg
     - assets/images/products/skt1.jpeg
     - assets/images/products/skt2.jpeg
+    - assets/login.jpg
+    - assets/design.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

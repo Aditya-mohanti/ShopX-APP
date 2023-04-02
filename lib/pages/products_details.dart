@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shop_x/main.dart';
 
 import '../components/products.dart';
+import 'home.dart';
 class PageDetails extends StatefulWidget {
   final product_detail_name;
   final product_detail_old_prize;
