@@ -92,6 +92,9 @@ flutter:
     - assets/images/products/skt2.jpeg
     - assets/login.jpg
     - assets/design.jpg
+    - assets/logo.png
+    - assets/lg.png
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

@@ -95,15 +95,19 @@ class _LoginState extends State<Login> {
 
         children: <Widget>[
           Image.asset(
-            'assets/login.jpg',
-          fit: BoxFit.contain,
+            'assets/design.jpg',
+          fit: BoxFit.cover,
           width: double.infinity,
+            height: double.infinity,
           ),
           //// to show logo design
           Container(
             color: Colors.black.withOpacity(0.4),
             width: double.infinity,
             height: double.infinity,
+          ),
+          Container(
+
           ),
           Padding(
             padding: const EdgeInsets.only(top: 200.0),
@@ -113,7 +117,7 @@ class _LoginState extends State<Login> {
                   child: Column(
                     children: <Widget>[
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(18.0),
                         child: Material(
                           borderRadius: BorderRadius.circular(20.0),
                           color: Colors.white.withOpacity(0.5),
@@ -125,7 +129,7 @@ class _LoginState extends State<Login> {
                               decoration: InputDecoration(
                                 hintText: "Email",
                                 icon: Icon(Icons.email),
-                                border: OutlineInputBorder(),
+
                               ),
                              validator: (value) {
                                 if (value==null) {
@@ -143,7 +147,7 @@ class _LoginState extends State<Login> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(18.0),
                         child: Material(
                           borderRadius: BorderRadius.circular(20.0),
                           color: Colors.white.withOpacity(0.5),
@@ -152,7 +156,6 @@ class _LoginState extends State<Login> {
                             padding: const EdgeInsets.only(left:12.0),
                             child: TextFormField(
                               controller: _passwordTextController,
-
                               decoration: InputDecoration(
                                 hintText: "Password",
                                 icon: Icon(Icons.lock_outline),
@@ -166,6 +169,60 @@ class _LoginState extends State<Login> {
                                   return"the password has to be atleast 6 characters long ";
                                 }
                               },
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(18.0),
+                        child: Material(
+                          borderRadius: BorderRadius.circular(20.0),
+                          color: Colors.blue,
+                          elevation: 0.0,
+                          child:MaterialButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (BuildContext)
+                              {
+                                return HomePage();
+                              }));
+                            },
+                            minWidth: MediaQuery.of(context).size.width,
+                            child: Text("Login",textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 22.0,
+                            ),),
+                          ),
+                        ),
+                      ),
+                      Divider(color: Colors.white,),
+                      Text("Other login in option",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 22.0,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(18.0),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Material(
+                            borderRadius: BorderRadius.circular(20.0),
+                            color: Colors.red,
+                            elevation: 0.0,
+                            child:MaterialButton(
+                              onPressed: (){
+
+                              },
+                              minWidth: MediaQuery.of(context).size.width,
+                              child: Text("Google",textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22.0,
+                                ),),
                             ),
                           ),
                         ),
